@@ -11,23 +11,27 @@ $( document ).ready(function() {
 	// load names
 	let names;
 
-	$.get('names.json', function( theNames ) {
+	$.get('names.json', function(theNames) {
 		names = theNames;
-		console.log('male first names:', names.male.first);
-	});
+	})
+		.done(function() {
+			console.log('loaded names!');
+		})
+		.fail(function() {
+			console.log('failed loading names...');
+		});
 
 	// getRandomNamePart ('male', 'first')
-	const getRandomNamePart = (gender, firstOrLast) => {
+	let getRandomNamePart = (gender, firstOrLast) => {
+		console.log('getting ' + gender + ' ' + firstOrLast + ' random name part');
 		let namePart = names[gender][firstOrLast];
 		return namePart[Math.round(Math.random() * (namePart.length - 1))];
 	};
 
 	$('button').on('click', {}, () => {
-		console.log('button clicked!');
-
 		let firstName = getRandomNamePart('male', 'first');
 		let lastName = getRandomNamePart('male', 'last');
 
-		$('#bng').html(firstName + lastName);
+		$('#bng').html(firstName + ' ' + lastName);
 	})
 });
