@@ -3,21 +3,37 @@
 
 	<head>
 		<script src="http://code.jquery.com/jquery-3.2.1.min.js" rel="text/javascript"></script>
+		<script src="https://cdn.jsdelivr.net/npm/icheck@1.0.2/icheck.min.js" rel="text/javascript"></script>
+		<link href="bng.css"  rel="stylesheet" type="text/css"/>
 	</head>
 
-	<body>
+	<body class="colorful">
+        <br/>
+        <br/>
 
-	<h1>BNG - blanke naam generator</h1>
+        <!-- title and description -->
+        <h1>BNG - blanke naam generator</h1>
+        <br/>
 
-	<p>blabla zo werkt het</p>
+        <p>blabla zo werkt het.</p>
+        <br/>
+        <br/>
 
+        <!-- gender -->
+        <input type="radio" name="iCheck" title="">
+        <br/>
+        <input type="radio" name="iCheck" checked title="">
+        <br/>
 
-	<button>geef mij een blanke naam!</button>
+        <!-- generate name -->
+        <button>geef mij een blanke naam!</button>
+        <br/>
+        <br/>
 
+        <!-- display name generated -->
+        <h2 id="bng">[ blanke naam komt hier ]</h2>
 
-	<h2>[blanke naam komt hier]</h2>
-	
-	<script src="bng.js"></script>
-
+        <!-- name generator code -->
+        <script src="bng.js"></script>
 	</body>
 </html>
