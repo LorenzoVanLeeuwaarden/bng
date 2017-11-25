@@ -23,7 +23,7 @@ $( document ).ready(function() {
 
 	// getRandomNamePart ('male', 'first')
 	let getRandomNamePart = (gender, firstOrLast) => {
-		console.log('getting ' + gender + ' ' + firstOrLast + ' random name part');
+		// console.log('getting ' + gender + ' ' + firstOrLast + ' random name part');
 		let namePart = names[gender][firstOrLast];
 		return namePart[Math.round(Math.random() * (namePart.length - 1))];
 	};
@@ -85,8 +85,10 @@ $( document ).ready(function() {
 	};
 
 	$('button').on('click', {}, () => {
-		let firstName = getRandomNamePart('male', 'first');
-		let lastName = getRandomNamePart('male', 'last');
+		// which gender was selected ?
+		let gender = $("#male").prop('checked') ? 'male' : 'female';
+		let firstName = getRandomNamePart(gender, 'first');
+		let lastName = getRandomNamePart(gender, 'last');
 
 		let fullName = firstName + ' ' + lastName;
 		$('#bng').html(fullName);
