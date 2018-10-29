@@ -4,58 +4,58 @@
 	<head>
 		<script src="http://code.jquery.com/jquery-3.2.1.min.js" rel="text/javascript"></script>
 		<script src="https://cdn.jsdelivr.net/npm/icheck@1.0.2/icheck.min.js" rel="text/javascript"></script>
-
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
         <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
 		<link href="https://cdn.jsdelivr.net/npm/icheck@1.0.2/skins/flat/flat.css" rel="stylesheet" type="text/css"/>
 		<link href="bng.css" rel="stylesheet" type="text/css"/>
 	</head>
 
 	<body>
-        <br/>
-        <!-- title and description -->
-        <h1>witte naam generator</h1>
-        <img
-                src="https://imgplaceholder.com/420x320/fff/757575/fa-hand-spock-o?text=witte+naam++nu&font-size=96&font-family=impact"
-                width="420"
-                height="320"
-        />
-        <br/>
-        <br/>
-        <!-- gender -->
-        <label>
-            <input type="radio" id="male" name="maleFemale" value="male" /> man
-        </label>
-        &nbsp;&nbsp;
-        <label>
-            <input type="radio" id="female" name="maleFemale" value="female" /> vrouw
-        </label>
-        &nbsp;&nbsp;
-        <label>
-            <input type="radio" id="unisex" name="maleFemale" value="neutraal" /> neutraal
-        </label>
+        <div class="centered generatorContainer">
+            <img
+                    class="generator"
+                    src="witte-namen-generator.jpg"
+                    width="1280"
+                    height="720"
+            />
+            <div class="nameContainer">
+                <!-- display name generated -->
+                <h1 class="ml6">
+                  <span class="text-wrapper">
+                    <span id="wngFirst" class="letters">voornaam</span>
+                      <br/>
+                    <span id="wngLast" class="letters">achternaam</span>
+                  </span>
+                </h1>
+                <!--<h2 id="wngFirst">[ voornaam ]</h2>-->
+                <!--<h2 id="wngLast">[ achternaam ]</h2>-->
+            </div>
+        </div>
 
-        <br/>
-        <br/>
+        <!-- controls -->
+        <div class="controls">
+            <label>
+                <input type="radio" id="male" name="maleFemale" value="male" /> man
+            </label>
+            &nbsp;&nbsp;
+            <label>
+                <input type="radio" id="female" name="maleFemale" value="female" /> vrouw
+            </label>
+            &nbsp;&nbsp;
+            <label>
+                <input type="radio" id="unisex" name="maleFemale" value="neutraal" /> neutraal
+            </label>
 
-        <!-- generate name -->
-        <button>geef mij een witte naam</button>
-        <br/>
-        <br/>
+            <!-- generate name -->
+            <button>geef mij een witte naam</button>
 
-        <!-- display name generated -->
-        <h2 id="bng">[ witte naam ]</h2>
-
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-
-        <p>
-            uitlegtekst uitlegtekst uitlegtekst uitlegtekst uitlegtekst uitlegtekst uitlegtekst<br/>
-            uitlegtekst uitlegtekst uitlegtekst uitlegtekst uitlegtekst uitlegtekst uitlegtekst<br/>
-            uitlegtekst uitlegtekst uitlegtekst uitlegtekst uitlegtekst uitlegtekst uitlegtekst<br/>
-            uitlegtekst uitlegtekst uitlegtekst
-        </p>
+            <p class="centered">
+                uitlegtekst uitlegtekst uitlegtekst uitlegtekst uitlegtekst uitlegtekst uitlegtekst<br/>
+                uitlegtekst uitlegtekst uitlegtekst uitlegtekst uitlegtekst uitlegtekst uitlegtekst<br/>
+                uitlegtekst uitlegtekst uitlegtekst uitlegtekst uitlegtekst uitlegtekst uitlegtekst<br/>
+                uitlegtekst uitlegtekst uitlegtekst
+            </p>
+        </div>
 
         <!-- name generator code -->
         <script src="bng.js"></script>

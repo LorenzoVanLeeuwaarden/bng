@@ -19,6 +19,57 @@ h1 {
     color: #117eff;
 }
 
+img.generator {
+    width: 100%;
+    max-width: 1280px;
+    object-fit: cover;
+}
+
+.centered {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.generatorContainer {
+    position: relative;
+    margin-bottom: -20px;
+    bottom: 20px;
+    max-width: 1280px;
+    height: 720px;
+}
+
+.nameContainer {
+    position: absolute;
+    top: 206px;
+    left: -175px;
+    margin-left: 50%;
+    margin-right: 50%;
+    background: #FFF;
+    width: 350px;
+    height: 176px;
+}
+
+.ml6 {
+    position: relative;
+    font-weight: 900;
+    font-size: 2.3em;
+    padding-top: 10px;
+}
+
+.ml6 .text-wrapper {
+    position: relative;
+    display: inline-block;
+    padding-top: 0.2em;
+    padding-right: 0.05em;
+    padding-bottom: 0.1em;
+    overflow: hidden;
+}
+
+.ml6 .letter {
+    display: inline-block;
+    line-height: 1em;
+}
+
 button {
     padding: 10px 30px;
     margin: 10px;
@@ -34,4 +85,10 @@ button {
 
 button:hover {
     background: #48abff;
+}
+
+.controls {
+    position: relative;
+    z-index: 2;
+    margin-top: -70px;
 }
